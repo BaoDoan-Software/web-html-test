@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm - NOIR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">NOIR</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="product-detail">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="shop.html">Cửa hàng</a>
+        <span>/</span>
+        <span id="breadcrumb-name">Sản phẩm</span>
+      </div>
+
+      <div class="product-detail-grid" id="product-detail">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <section class="related-products">
+    <div class="container">
+      <h2 class="section-title">Sản phẩm liên quan</h2>
+      <div class="products-grid" id="related-products"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>NOIR</h4>
+          <p>Thương hiệu thời trang tối giản dành cho những ai yêu thích sự thanh lịch và hiện đại trong phong cách sống.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Cửa hàng</h4>
+          <a href="shop.html?category=ao">Áo</a>
+          <a href="shop.html?category=quan">Quần</a>
+          <a href="shop.html?category=phukien">Phụ kiện</a>
+          <a href="shop.html">Tất cả</a>
+        </div>
+        <div class="footer-col">
+          <h4>Thông tin</h4>
+          <a href="about.html">Về chúng tôi</a>
+          <a href="contact.html">Liên hệ</a>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Điều khoản sử dụng</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="#">Hướng dẫn mua hàng</a>
+          <a href="#">Bảng size</a>
+          <a href="#">FAQ</a>
+          <a href="contact.html">Liên hệ hỗ trợ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOIR. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Tiktok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let selectedSize = '';
+    let selectedQty = 1;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get('id');
+
+      if (!productId) {
+        window.location.href = 'shop.html';
+        return;
+      }
+
+      const product = getProductById(productId);
+      if (!product) {
+        window.location.href = 'shop.html';
+        return;
+      }
+
+      // Update page title
+      document.title = `${product.name} - NOIR`;
+      document.getElementById('breadcrumb-name').textContent = product.name;
+
+      // Render product detail
+      selectedSize = product.sizes[0];
+      renderProductDetail(product);
+
+      // Render related products
+      const related = getRelatedProducts(product.id);
+      renderProductsGrid('related-products', related);
+    });
+
+    function renderProductDetail(product) {
+      const container = document.getElementById('product-detail');
+      container.innerHTML = `
+        <div class="product-detail-image">
+          <img src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="product-detail-info">
+          <h1>${product.name}</h1>
+          <div class="product-detail-price">${formatPrice(product.price)}</div>
+          <p class="product-detail-desc">${product.description}</p>
+
+          <div class="size-selector">
+            <label>Kích thước</label>
+            <div class="size-options">
+              ${product.sizes.map(size => `
+                <button class="size-btn ${size === selectedSize ? 'active' : ''}" onclick="selectSize('${size}', this)">
+                  ${size}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="quantity-selector">
+            <label>Số lượng</label>
+            <button class="qty-btn" onclick="changeDetailQty(-1)">−</button>
+            <div class="qty-value" id="qty-display">1</div>
+            <button class="qty-btn" onclick="changeDetailQty(1)">+</button>
+          </div>
+
+          <button class="btn btn-primary" onclick="addProductToCart(${product.id})">
+            Thêm vào giỏ hàng
+          </button>
+          <a href="shop.html" class="btn btn-outline">Tiếp tục mua sắm</a>
+        </div>
+      `;
+    }
+
+    function selectSize(size, btn) {
+      selectedSize = size;
+      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function changeDetailQty(delta) {
+      selectedQty = Math.max(1, selectedQty + delta);
+      document.getElementById('qty-display').textContent = selectedQty;
+    }
+
+    function addProductToCart(productId) {
+      const product = getProductById(productId);
+      addToCart(productId, selectedSize, selectedQty);
+      showToast(`Đã thêm "${product.name}" (Size ${selectedSize}) vào giỏ hàng`);
+    }
+  </script>
+</body>
+</html>

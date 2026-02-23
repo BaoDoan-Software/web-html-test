@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa hàng - NOIR</title>
+  <meta name="description" content="Khám phá bộ sưu tập thời trang tối giản từ NOIR. Áo, quần, phụ kiện chất lượng cao.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">NOIR</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html" class="active">Cửa hàng</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Cửa hàng</h1>
+      <p>Khám phá bộ sưu tập đầy đủ của chúng tôi</p>
+    </div>
+  </section>
+
+  <!-- Shop Content -->
+  <section class="shop-content">
+    <div class="container">
+      <div class="shop-controls">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-category="all">Tất cả</button>
+          <button class="filter-btn" data-category="ao">Áo</button>
+          <button class="filter-btn" data-category="quan">Quần</button>
+          <button class="filter-btn" data-category="phukien">Phụ kiện</button>
+        </div>
+        <select class="sort-select" id="sort-select">
+          <option value="default">Sắp xếp</option>
+          <option value="price-asc">Giá: Thấp đến Cao</option>
+          <option value="price-desc">Giá: Cao đến Thấp</option>
+        </select>
+      </div>
+      <div class="products-grid" id="shop-products"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>NOIR</h4>
+          <p>Thương hiệu thời trang tối giản dành cho những ai yêu thích sự thanh lịch và hiện đại trong phong cách sống.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Cửa hàng</h4>
+          <a href="shop.html?category=ao">Áo</a>
+          <a href="shop.html?category=quan">Quần</a>
+          <a href="shop.html?category=phukien">Phụ kiện</a>
+          <a href="shop.html">Tất cả</a>
+        </div>
+        <div class="footer-col">
+          <h4>Thông tin</h4>
+          <a href="about.html">Về chúng tôi</a>
+          <a href="contact.html">Liên hệ</a>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Điều khoản sử dụng</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="#">Hướng dẫn mua hàng</a>
+          <a href="#">Bảng size</a>
+          <a href="#">FAQ</a>
+          <a href="contact.html">Liên hệ hỗ trợ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOIR. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Tiktok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let currentCategory = 'all';
+    let currentSort = 'default';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check URL params for category
+      const params = new URLSearchParams(window.location.search);
+      const urlCategory = params.get('category');
+      if (urlCategory) {
+        currentCategory = urlCategory;
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.category === urlCategory);
+        });
+      }
+
+      renderShop();
+
+      // Filter buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.dataset.category;
+          renderShop();
+        });
+      });
+
+      // Sort select
+      document.getElementById('sort-select').addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        renderShop();
+      });
+    });
+
+    function renderShop() {
+      const filtered = filterProducts(currentCategory, currentSort);
+      renderProductsGrid('shop-products', filtered);
+    }
+  </script>
+</body>
+</html>
