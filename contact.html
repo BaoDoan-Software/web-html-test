@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ - NOIR</title>
+  <meta name="description" content="Liên hệ với NOIR. Chúng tôi luôn sẵn sàng hỗ trợ bạn.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">NOIR</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html" class="active">Liên hệ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Liên hệ</h1>
+      <p>Chúng tôi luôn sẵn sàng lắng nghe bạn</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info fade-in">
+          <h2>Kết nối<br>với chúng tôi</h2>
+          <p>Nếu bạn có bất kỳ câu hỏi nào về sản phẩm, đơn hàng hoặc cần hỗ trợ, đừng ngần ngại liên hệ. Đội ngũ của chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
+
+          <div class="contact-detail">
+            <h4>Địa chỉ</h4>
+            <p>123 Nguyễn Huệ, Quận 1<br>TP. Hồ Chí Minh, Việt Nam</p>
+          </div>
+
+          <div class="contact-detail">
+            <h4>Email</h4>
+            <p>hello@noir.vn</p>
+          </div>
+
+          <div class="contact-detail">
+            <h4>Điện thoại</h4>
+            <p>0901 234 567</p>
+          </div>
+
+          <div class="contact-detail">
+            <h4>Giờ làm việc</h4>
+            <p>Thứ 2 - Thứ 7: 9:00 - 21:00<br>Chủ nhật: 10:00 - 18:00</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form fade-in">
+          <h3>Gửi tin nhắn</h3>
+          <form onsubmit="event.preventDefault(); showToast('Tin nhắn đã được gửi. Cảm ơn bạn!'); this.reset();">
+            <div class="form-group">
+              <label for="name">Họ tên</label>
+              <input type="text" id="name" placeholder="Nhập họ tên của bạn" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Nhập email của bạn" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Chủ đề</label>
+              <select id="subject">
+                <option value="general">Câu hỏi chung</option>
+                <option value="order">Về đơn hàng</option>
+                <option value="return">Đổi trả sản phẩm</option>
+                <option value="other">Khác</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tin nhắn</label>
+              <textarea id="message" placeholder="Nhập nội dung tin nhắn..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>NOIR</h4>
+          <p>Thương hiệu thời trang tối giản dành cho những ai yêu thích sự thanh lịch và hiện đại trong phong cách sống.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Cửa hàng</h4>
+          <a href="shop.html?category=ao">Áo</a>
+          <a href="shop.html?category=quan">Quần</a>
+          <a href="shop.html?category=phukien">Phụ kiện</a>
+          <a href="shop.html">Tất cả</a>
+        </div>
+        <div class="footer-col">
+          <h4>Thông tin</h4>
+          <a href="about.html">Về chúng tôi</a>
+          <a href="contact.html">Liên hệ</a>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Điều khoản sử dụng</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="#">Hướng dẫn mua hàng</a>
+          <a href="#">Bảng size</a>
+          <a href="#">FAQ</a>
+          <a href="contact.html">Liên hệ hỗ trợ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOIR. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Tiktok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
