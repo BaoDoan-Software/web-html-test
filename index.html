@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIR - Thời Trang Tối Giản</title>
+  <meta name="description" content="NOIR - Thương hiệu thời trang tối giản, hiện đại. Mua sắm áo, quần, phụ kiện chất lượng cao.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">NOIR</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">Bộ sưu tập mới 2026</p>
+      <h1>Phong Cách<br>Tối Giản</h1>
+      <p class="hero-desc">Khám phá bộ sưu tập thời trang tối giản, nơi sự thanh lịch gặp gỡ sự thoải mái trong từng thiết kế.</p>
+      <a href="shop.html" class="btn btn-primary">Mua sắm ngay</a>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title fade-in">Danh mục</h2>
+      <div class="categories-grid">
+        <a href="shop.html?category=ao" class="category-card fade-in">
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&h=800&fit=crop" alt="Áo" loading="lazy">
+          <div class="category-overlay">
+            <h3>Áo</h3>
+          </div>
+        </a>
+        <a href="shop.html?category=quan" class="category-card fade-in">
+          <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&h=800&fit=crop" alt="Quần" loading="lazy">
+          <div class="category-overlay">
+            <h3>Quần</h3>
+          </div>
+        </a>
+        <a href="shop.html?category=phukien" class="category-card fade-in">
+          <img src="https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?w=600&h=800&fit=crop" alt="Phụ kiện" loading="lazy">
+          <div class="category-overlay">
+            <h3>Phụ kiện</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="products-section">
+    <div class="container">
+      <h2 class="section-title fade-in">Sản phẩm nổi bật</h2>
+      <div class="products-grid" id="featured-products"></div>
+      <div style="text-align:center; margin-top:48px;" class="fade-in">
+        <a href="shop.html" class="btn btn-outline">Xem tất cả sản phẩm</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner -->
+  <section class="banner fade-in">
+    <div class="container">
+      <h2>Phong cách là cách bạn<br>thể hiện chính mình</h2>
+      <p>Mỗi thiết kế của NOIR đều mang triết lý "less is more" — đơn giản nhưng không bao giờ nhàm chán.</p>
+      <a href="shop.html" class="btn btn-primary">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter fade-in">
+    <div class="container">
+      <h2 class="section-title">Đăng ký nhận tin</h2>
+      <p>Nhận thông tin về bộ sưu tập mới và ưu đãi độc quyền.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Cảm ơn bạn đã đăng ký!'); this.reset();">
+        <input type="email" placeholder="Nhập email của bạn" required>
+        <button type="submit" class="btn btn-primary">Đăng ký</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>NOIR</h4>
+          <p>Thương hiệu thời trang tối giản dành cho những ai yêu thích sự thanh lịch và hiện đại trong phong cách sống.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Cửa hàng</h4>
+          <a href="shop.html?category=ao">Áo</a>
+          <a href="shop.html?category=quan">Quần</a>
+          <a href="shop.html?category=phukien">Phụ kiện</a>
+          <a href="shop.html">Tất cả</a>
+        </div>
+        <div class="footer-col">
+          <h4>Thông tin</h4>
+          <a href="about.html">Về chúng tôi</a>
+          <a href="contact.html">Liên hệ</a>
+          <a href="#">Chính sách đổi trả</a>
+          <a href="#">Điều khoản sử dụng</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="#">Hướng dẫn mua hàng</a>
+          <a href="#">Bảng size</a>
+          <a href="#">FAQ</a>
+          <a href="contact.html">Liên hệ hỗ trợ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOIR. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Tiktok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const featured = getFeaturedProducts();
+      renderProductsGrid('featured-products', featured);
+    });
+  </script>
+</body>
+</html>
