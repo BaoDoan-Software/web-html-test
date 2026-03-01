@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - NOIR</title>
+  <meta name="description" content="Câu hỏi thường gặp khi mua sắm tại NOIR.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">NOIR</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="shop.html">Cửa hàng</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Câu hỏi thường gặp</h1>
+      <p>Giải đáp nhanh những thắc mắc của bạn</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="info-page">
+    <div class="container">
+      <div class="info-content fade-in">
+
+        <div class="faq-category">
+          <h2>Đặt hàng & Thanh toán</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Làm thế nào để đặt hàng trên NOIR?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Bạn chỉ cần chọn sản phẩm, chọn size và số lượng, thêm vào giỏ hàng rồi tiến hành thanh toán. Xem chi tiết tại trang <a href="huong-dan-mua-hang.html">Hướng dẫn mua hàng</a>.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              NOIR chấp nhận những hình thức thanh toán nào?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Chúng tôi chấp nhận: thanh toán khi nhận hàng (COD), chuyển khoản ngân hàng, và ví điện tử (MoMo, ZaloPay).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Tôi có thể hủy đơn hàng không?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Bạn có thể hủy đơn hàng trước khi đơn được giao cho đơn vị vận chuyển. Liên hệ hotline <strong>0901 234 567</strong> hoặc email <strong>hello@noir.vn</strong> để được hỗ trợ.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2>Vận chuyển</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Thời gian giao hàng là bao lâu?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Nội thành TP.HCM và Hà Nội: 2-3 ngày làm việc. Các tỉnh thành khác: 5-7 ngày làm việc.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Phí vận chuyển là bao nhiêu?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Miễn phí vận chuyển cho đơn hàng từ 500.000₫. Đơn hàng dưới 500.000₫ có phí vận chuyển 30.000₫.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Tôi có thể theo dõi đơn hàng không?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có, sau khi đơn hàng được gửi đi, chúng tôi sẽ gửi mã vận đơn qua email để bạn theo dõi trực tiếp trên website đơn vị vận chuyển.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2>Sản phẩm & Size</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Làm sao để chọn đúng size?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Tham khảo <a href="bang-size.html">Bảng size</a> chi tiết của chúng tôi. Nếu số đo nằm giữa hai size, nên chọn size lớn hơn. Bạn cũng có thể liên hệ để được tư vấn trực tiếp.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Chất liệu sản phẩm NOIR có tốt không?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Tất cả sản phẩm NOIR đều sử dụng chất liệu cao cấp, được kiểm tra chất lượng trước khi đến tay khách hàng. Chúng tôi ưu tiên cotton organic, linen tự nhiên và vải tái chế thân thiện với môi trường.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2>Đổi trả & Bảo hành</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Chính sách đổi trả như thế nào?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>NOIR chấp nhận đổi trả trong vòng 30 ngày với sản phẩm còn nguyên tem mác và chưa qua sử dụng. Xem chi tiết tại trang <a href="chinh-sach-doi-tra.html">Chính sách đổi trả</a>.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Sản phẩm bị lỗi thì phải làm sao?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Nếu sản phẩm bị lỗi từ nhà sản xuất, NOIR sẽ đổi mới hoặc hoàn tiền 100%. Phí vận chuyển đổi trả do NOIR chịu. Liên hệ ngay qua hotline <strong>0901 234 567</strong>.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Tôi muốn đổi size thì được không?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Được, bạn có thể đổi size trong vòng 7 ngày kể từ ngày nhận hàng. Sản phẩm phải còn nguyên tem mác, chưa giặt hay sử dụng. Phí ship đổi size do khách hàng chịu.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-cta">
+          <p>Không tìm thấy câu trả lời?</p>
+          <a href="contact.html" class="btn btn-primary">Liên hệ hỗ trợ</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>NOIR</h4>
+          <p>Thương hiệu thời trang tối giản dành cho những ai yêu thích sự thanh lịch và hiện đại trong phong cách sống.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Cửa hàng</h4>
+          <a href="shop.html?category=ao">Áo</a>
+          <a href="shop.html?category=quan">Quần</a>
+          <a href="shop.html?category=phukien">Phụ kiện</a>
+          <a href="shop.html">Tất cả</a>
+        </div>
+        <div class="footer-col">
+          <h4>Thông tin</h4>
+          <a href="about.html">Về chúng tôi</a>
+          <a href="contact.html">Liên hệ</a>
+          <a href="chinh-sach-doi-tra.html">Chính sách đổi trả</a>
+          <a href="dieu-khoan.html">Điều khoản sử dụng</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="huong-dan-mua-hang.html">Hướng dẫn mua hàng</a>
+          <a href="bang-size.html">Bảng size</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Liên hệ hỗ trợ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOIR. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Tiktok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+</body>
+</html>
