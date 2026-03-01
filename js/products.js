@@ -109,9 +109,9 @@ function renderProductCard(product) {
 // Get Vietnamese category label
 function getCategoryLabel(category) {
   const labels = {
-    'ao': 'Áo',
-    'quan': 'Quần',
-    'phukien': 'Phụ kiện'
+    'thethao': 'Thể thao',
+    'caoco': 'Cao cổ',
+    'ngan': 'Ngắn'
   };
   return labels[category] || category;
 }
