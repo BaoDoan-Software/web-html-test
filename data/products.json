@@ -3,7 +3,7 @@
     "name": "Vớ Thể Thao Trắng Classic",
     "price": 45000,
     "category": "thethao",
-    "image": "images/products/anh 1.png",
+    "image": "images/products/anh 1.jpg",
     "description": "Vớ thể thao trắng cotton dày dặn, đệm êm vùng gót và mũi chân. Chất liệu thoáng khí, thấm hút mồ hôi tốt, phù hợp mọi hoạt động.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": true
@@ -12,7 +12,7 @@
     "name": "Vớ Cao Cổ Đen Minimal",
     "price": 55000,
     "category": "caoco",
-    "image": "images/products/anh 2.png",
+    "image": "images/products/anh 2.jpg",
     "description": "Vớ cao cổ đen phong cách tối giản, chất liệu cotton pha spandex co giãn tốt. Phù hợp mang với giày sneaker hoặc boots.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": true
@@ -21,7 +21,7 @@
     "name": "Vớ Ngắn Thể Thao Ankle",
     "price": 35000,
     "category": "ngan",
-    "image": "images/products/anh 3.png",
+    "image": "images/products/anh 3.jpg",
     "description": "Vớ ngắn cổ thấp chuyên dụng cho thể thao, có đệm silicon chống tuột gót. Thoáng khí và nhẹ nhàng.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": true
@@ -30,7 +30,7 @@
     "name": "Vớ Business Công Sở",
     "price": 65000,
     "category": "caoco",
-    "image": "images/products/anh 4.png",
+    "image": "images/products/anh 4.jpg",
     "description": "Vớ công sở cao cấp chất liệu cotton mịn, mỏng nhẹ nhưng bền. Thiết kế thanh lịch phù hợp với giày tây.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": true
@@ -39,7 +39,7 @@
     "name": "Vớ Chạy Bộ Performance",
     "price": 75000,
     "category": "thethao",
-    "image": "images/products/anh 5.png",
+    "image": "images/products/anh 5.jpg",
     "description": "Vớ chạy bộ chuyên dụng với công nghệ thoáng khí vùng mu bàn chân, đệm gel vùng gót chống sốc hiệu quả.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": true
@@ -48,7 +48,7 @@
     "name": "Vớ Cotton Cổ Trung",
     "price": 40000,
     "category": "caoco",
-    "image": "images/products/anh 6.png",
+    "image": "images/products/anh 6.jpg",
     "description": "Vớ cổ trung cotton 100% mềm mại, phù hợp sử dụng hằng ngày. Form ôm vừa vặn, không bị tuột khi vận động.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": false
@@ -57,7 +57,7 @@
     "name": "Vớ Ẩn Chân No-Show",
     "price": 30000,
     "category": "ngan",
-    "image": "images/products/anh 7.png",
+    "image": "images/products/anh 7.jpg",
     "description": "Vớ ẩn chân siêu thấp, hoàn toàn không lộ khi mang giày. Có miếng silicon chống tuột, lý tưởng cho giày lười và slip-on.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": true
@@ -66,7 +66,7 @@
     "name": "Vớ Len Giữ Ấm Mùa Đông",
     "price": 85000,
     "category": "caoco",
-    "image": "images/products/anh 8.png",
+    "image": "images/products/anh 8.jpg",
     "description": "Vớ len dày dặn giữ ấm tuyệt vời cho mùa đông. Chất liệu len pha acrylic mềm mại, không gây ngứa.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": true
@@ -75,7 +75,7 @@
     "name": "Set Vớ 7 Ngày Basic",
     "price": 199000,
     "category": "ngan",
-    "image": "images/products/anh 9.png",
+    "image": "images/products/anh 9.jpg",
     "description": "Bộ 7 đôi vớ ngắn cho cả tuần, mỗi đôi một màu khác nhau. Chất liệu cotton pha polyester bền đẹp, tiện lợi.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": true
@@ -84,7 +84,7 @@
     "name": "Vớ Thể Thao Dài Crew",
     "price": 50000,
     "category": "thethao",
-    "image": "images/products/anh 10.png",
+    "image": "images/products/anh 10.jpg",
     "description": "Vớ thể thao dài kiểu crew, đệm dày vùng đế chân. Phù hợp cho gym, bóng rổ và các hoạt động thể thao cường độ cao.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": false
@@ -93,7 +93,7 @@
     "name": "Vớ Sợi Tre Bamboo",
     "price": 70000,
     "category": "caoco",
-    "image": "images/products/anh 11.png",
+    "image": "images/products/anh 11.jpg",
     "description": "Vớ sợi tre tự nhiên kháng khuẩn, khử mùi hiệu quả. Chất vải siêu mềm, thân thiện với môi trường và làn da nhạy cảm.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": false
@@ -102,7 +102,7 @@
     "name": "Vớ Color Block Phối Màu",
     "price": 55000,
     "category": "thethao",
-    "image": "images/products/anh 12.png",
+    "image": "images/products/anh 12.jpg",
     "description": "Vớ phối màu color block phong cách streetwear, nổi bật và cá tính. Chất cotton dày dặn, bền màu sau nhiều lần giặt.",
     "sizes": ["S (36-38)", "M (39-41)", "L (42-44)"],
     "featured": false
