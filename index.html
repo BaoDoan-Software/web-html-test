@@ -155,7 +155,7 @@
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    onProductsReady(() => {
       const featured = getFeaturedProducts();
       renderProductsGrid('featured-products', featured);
     });

@@ -112,7 +112,7 @@
     let selectedSize = '';
     let selectedQty = 1;
 
-    document.addEventListener('DOMContentLoaded', () => {
+    onProductsReady(() => {
       const params = new URLSearchParams(window.location.search);
       const productId = params.get('id');
 

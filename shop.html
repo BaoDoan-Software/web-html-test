@@ -116,7 +116,7 @@
     let currentCategory = 'all';
     let currentSort = 'default';
 
-    document.addEventListener('DOMContentLoaded', () => {
+    onProductsReady(() => {
       // Check URL params for category
       const params = new URLSearchParams(window.location.search);
       const urlCategory = params.get('category');
